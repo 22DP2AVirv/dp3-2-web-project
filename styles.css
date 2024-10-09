@@ -1,0 +1,200 @@
+/* Pamatstili */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 80px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+}
+
+.navbar {
+    padding: 6px 20px;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar div {
+    display: flex;
+    gap: 5px;
+}
+
+.navbar a {
+    height: 15px;
+    border-radius: 18px;
+    transition: all;
+    transition-duration: 300ms;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right {
+    float: right;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Saturs ar aprakstu un kartītēm */
+.content {
+    padding: 20px 40px;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.main-section {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.description h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.description div img{
+    border-radius: 10px;
+}
+
+.description div {
+    display: flex;
+}
+
+.description div p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+.description img {
+    margin-top: 10px;
+}
+
+/* Kartītes */
+.cards-container {
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 15px 0;
+    font-size: 1.5em;
+}
+
+.card p {
+    font-size: 1em;
+    color: #777;
+}
+
+.card button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card button:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.05);
+    color: black;
+
+}
+
+/* Sānjosla */
+.sidebar {
+    border-radius: 10px;
+    flex: 30%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    margin-left: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+/* 
+.sidebar ul li a:hover {
+    color: #f1f1f1;
+} */
+
+/* Kājene */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+}
+
+.link-footer {
+    color: white;
+    text-decoration: none;
+}
+
+.card-content button {
+    background-color: #333;
+}
