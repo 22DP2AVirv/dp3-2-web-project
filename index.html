@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masāžas pakalpojumi</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!--Galvene-->
-    <!-- <div class="header">
-        <h1>Masāžas pakalpojumi</h1>
-        <p>Aleksis Virvinskis</p>
-    </div> -->
-    
-    <!--Navigācija-->
-    
+    <!-- Navigācija ar hamburgera izvēlni -->
     <div class="navbar">
-        <div>
-            <a href="#home">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+        <div class="menu">
+            <a href="#home">Home <i class="fas fa-home"></i></a>
+            <a href="#">About <i class="fas fa-info-circle"></i></a>
+            <div class="dropdown">
+                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Masāža 1</a>
+                    <a href="#">Masāža 2</a>
+                    <a href="#">Masāža 3</a>
+                </div>
+            </div>
+            <a href="#">Contact <i class="fas fa-envelope"></i></a>
         </div>
-        
-        <a href="#" class="right">Meklēt</a>
+        <a href="#" class="right">Meklēt <i class="fas fa-search"></i></a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
+
+    <!-- Dark mode poga -->
+    <div class="dark-mode-toggle">
+        <button id="dark-mode-btn">Dark Mode</button>
     </div>
 
     <!-- Galvenais saturs ar aprakstu, kartītēm un sānjoslu -->
@@ -35,40 +44,39 @@
                     <p>Mēs piedāvājam profesionālus masāžas pakalpojumus, lai uzlabotu jūsu labsajūtu un veselību. Izvēlieties no dažādiem masāžas veidiem un izbaudiet relaksāciju.</p>
                     <img src="masaza.jpeg" alt="Masāža" width="300">
                 </div>
-                
             </div>
 
-            <!-- Kartītes -->
+            <!-- Kartītes ar hover un modālo logu -->
             <div class="cards-container">
                 <div class="card">
-                    <img src="https://zn48.ru/upload/delight.webpconverter/upload/iblock/191/19165773cc9cd11e83498a5438ff3c04.png.webp?166330703521470" alt="Produkts 1">
+                    <img src="https://zn48.ru/upload/delight.webpconverter/upload/iblock/191/19165773cc9cd11e83498a5438ff3c04.png.webp?166330703521470" alt="Speciālists 1">
                     <div class="card-content">
                         <h3>1. Speciālists</h3>
                         <p>Irina</p>
-                        <button >Pasūtīt</button>
+                        <button onclick="openModal('Irina', 'Speciālists 1', 'Profesionāla masiere ar vairāk nekā 10 gadu pieredzi.')">Pasūtīt</button>
                     </div>
                 </div>
-            
+
                 <div class="card">
-                    <img src="https://i0.wp.com/urologyspecialistspc.com/wp-content/uploads/2020/08/Dr-Osula.jpg?fit=400%2C533&ssl=1" alt="Produkts 2">
+                    <img src="https://i0.wp.com/urologyspecialistspc.com/wp-content/uploads/2020/08/Dr-Osula.jpg?fit=400%2C533&ssl=1" alt="Speciālists 2">
                     <div class="card-content">
                         <h3>2. Speciālists</h3>
                         <p>Janka</p>
-                        <button>Pasūtīt</button>
+                        <button onclick="openModal('Janka', 'Speciālists 2', 'Īpaša specializācija terapeitiskajā masāžā.')">Pasūtīt</button>
                     </div>
                 </div>
-            
+
                 <div class="card">
-                    <img src="https://hsvheartmds.com/wp-content/uploads/2017/01/dr_foster2.jpg" alt="Produkts 3">
+                    <img src="https://hsvheartmds.com/wp-content/uploads/2017/01/dr_foster2.jpg" alt="Speciālists 3">
                     <div class="card-content">
                         <h3>3. Speciālists</h3>
                         <p>Renča</p>
-                        <button>Pasūtīt</button>
+                        <button onclick="openModal('Renča', 'Speciālists 3', 'Eksperts sporta un relaksācijas masāžās.')">Pasūtīt</button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <!-- Sānjosla ar saistītajiem rakstiem -->
         <aside class="sidebar">
             <h3>Saistītie raksti</h3>
@@ -80,6 +88,15 @@
         </aside>
     </div>
 
+    <!-- Modālais logs -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
     <!-- Kājene -->
     <footer class="footer">
         <p>&copy; 2024 Aleksis Virvinskis. Visas tiesības aizsargātas.</p>
@@ -89,5 +106,7 @@
             <a class="link-footer" href="#">Twitter</a>
         </p>
     </footer>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
