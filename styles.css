@@ -112,25 +112,17 @@ body {
 }
 
 .description h2 {
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
 }
 
-.description div img {
-    border-radius: 10px;
-}
 
 .description div {
     display: flex;
 }
 
 .description div p {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-.description img {
-    margin-top: 10px;
+    font-size: 20px;
 }
 
 /* Kartītes */
