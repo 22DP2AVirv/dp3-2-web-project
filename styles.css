@@ -33,6 +33,7 @@ body {
 
 .navbar div.menu {
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
@@ -45,8 +46,8 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #1abc9c;
-    color: white;
+    background-color: #f1f1f1;
+    color: #333;
 }
 
 .right {
@@ -167,7 +168,8 @@ body {
 }
 
 .card-content button {
-    background-color: #1abc9c;
+    background-color: #333;
+    border-radius: 10px;
     border: none;
     padding: 10px;
     color: white;
@@ -176,8 +178,8 @@ body {
 }
 
 .card-content button:hover {
-    background-color: #333;
-    color: white;
+    background-color: white;
+    color: #333;
     transform: scale(1.05);
 }
 
@@ -257,15 +259,19 @@ body {
 }
 
 #dark-mode-btn {
+    transition: all 30ms;
+    transition-duration: 300ms;
     padding: 10px;
-    background-color: #1abc9c;
+    border-radius: 10px;
+    background-color: #333;
     color: white;
     border: none;
     cursor: pointer;
 }
 
 #dark-mode-btn:hover {
-    background-color: #333;
+    background-color: white;
+    color: #333;
 }
 
 /* Hamburger izvēlne - responsīvais dizains */
@@ -288,4 +294,9 @@ body {
         display: block;
         color: white;
     }
+}
+
+.link-footer {
+    color: white;
+    text-decoration: none;
 }
