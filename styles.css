@@ -107,7 +107,7 @@ body {
 .description {
     display: flex;
     flex-direction: column;
-    text-align: left;
+    text-align: center;
     margin-bottom: 20px;
 }
 
@@ -173,29 +173,6 @@ body {
     background-color: white;
     color: #333;
     transform: scale(1.05);
-}
-
-/* Sānjosla */
-.sidebar {
-    border-radius: 10px;
-    flex: 30%;
-    padding: 20px;
-    background-color: #f1f1f1;
-    margin-left: 20px;
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar ul li {
-    margin: 10px 0;
-}
-
-.sidebar ul li a {
-    text-decoration: none;
-    color: #333;
 }
 
 /* Kājene */
@@ -292,4 +269,17 @@ body {
 .link-footer {
     color: white;
     text-decoration: none;
+}
+
+.social-icons a i {
+    font-size: 30px;
+    transition: transform 0.3s;
+}
+
+.social-icons a:hover i {
+    transform: scale(1.2);
+}
+
+.footer p {
+    text-align: center;
 }
