@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background: linear-gradient(to left, #dcdcdc 0%, #ffffff 50%, #dcdcdc 100%);
     transition: background-color 0.3s;
 }
 /* Dark mode poga */
@@ -18,7 +18,7 @@ body {
 }
 
 .dark-mode {
-    background-color: #333;
+    background: linear-gradient(to left, #333 0%, #444 50%, #333 100%);
     color: white;
 }
 
@@ -42,12 +42,21 @@ body {
     color: #333;
 }
 
+body.dark-mode #dark-mode-btn:hover {
+    background-color: #444;
+    color: white;
+}
+
 body.dark-mode {
     background-color: #333;
     color: #f5f5f5;
 }
 
-body.dark-mode header {
+body.dark-mode img {
+    filter: brightness(80%);
+}
+
+body.dark-mode .header {
     background-color: #444;
 }
 
@@ -96,10 +105,13 @@ body.dark-mode .dropdown-content{
     background-color: #444;
 }
 
+body.dark-mode .dropdown-content a:hover{
+    background-color: #333;
+}
+
 .header {
     padding: 80px;
     text-align: center;
-    background: #1abc9c;
     color: white;
 }
 
@@ -243,6 +255,7 @@ body.dark-mode .dropdown-content{
 }
 
 .card-content button {
+    font-size: 15px;
     background-color: #333;
     border-radius: 10px;
     border: none;

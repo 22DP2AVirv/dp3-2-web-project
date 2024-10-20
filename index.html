@@ -8,23 +8,20 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
-
 <body>
-    <!-- Navigācija ar hamburgera izvēlni -->
     <div class="navbar">
         <div class="menu">
-            <a href="#home">Home <i class="fas fa-home"></i></a>
-            <a href="#">About <i class="fas fa-info-circle"></i></a>
+            <a href="#home">Sākums <i class="fas fa-home"></i></a>
+            <a href="#">Par mums <i class="fas fa-info-circle"></i></a>
             <div class="dropdown">
-                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <a href="#">Izvēlne <i class="fas fa-caret-down"></i></a>
                 <div class="dropdown-content">
                     <a href="#">Masāža 1</a>
                     <a href="#">Masāža 2</a>
                     <a href="#">Masāža 3</a>
                 </div>
-                    
             </div>
-            <a href="#">Contact <i class="fas fa-envelope"></i></a>
+            <a href="#">Kontakti <i class="fas fa-envelope"></i></a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
@@ -35,18 +32,12 @@
         <button id="dark-mode-btn">Dark Mode</button>
     </div>
 
-    <!-- Galvenais saturs ar aprakstu, kartītēm un sānjoslu -->
     <div class="content">
         <div class="main-section">
-            <!-- Apraksts par masāžas pakalpojumiem -->
             <div class="description">
                 <h2>Par masāžas pakalpojumiem</h2>
-                <div>
-                    <p>Mēs piedāvājam profesionālus masāžas pakalpojumus, lai uzlabotu jūsu labsajūtu un veselību. Izvēlieties no dažādiem masāžas veidiem un izbaudiet relaksāciju.</p>
-                </div>
+                <p>Mēs piedāvājam profesionālus masāžas pakalpojumus, lai uzlabotu jūsu labsajūtu un veselību. Izbaudiet relaksāciju.</p>
             </div>
-
-            <!-- Kartītes ar hover un modālo logu -->
             <div class="cards-container">
                 <div class="card">
                     <img src="https://zn48.ru/upload/delight.webpconverter/upload/iblock/191/19165773cc9cd11e83498a5438ff3c04.png.webp?166330703521470" alt="Speciālists 1">
@@ -56,7 +47,6 @@
                         <button onclick="openModal('Irina', 'Speciālists 1', 'Profesionāla masiere ar vairāk nekā 10 gadu pieredzi.')">Pasūtīt</button>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="https://i0.wp.com/urologyspecialistspc.com/wp-content/uploads/2020/08/Dr-Osula.jpg?fit=400%2C533&ssl=1" alt="Speciālists 2">
                     <div class="card-content">
@@ -65,7 +55,6 @@
                         <button onclick="openModal('Janka', 'Speciālists 2', 'Īpaša specializācija terapeitiskajā masāžā.')">Pasūtīt</button>
                     </div>
                 </div>
-
                 <div class="card">
                     <img src="https://hsvheartmds.com/wp-content/uploads/2017/01/dr_foster2.jpg" alt="Speciālists 3">
                     <div class="card-content">
@@ -76,11 +65,8 @@
                 </div>
             </div>
         </div>
-
-        
     </div>
 
-    <!-- Modālais logs -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -95,9 +81,10 @@
             <a href="#"><i class="fab fa-facebook"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
             <a href="#"><i class="fab fa-twitter"></i></a>
-            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
