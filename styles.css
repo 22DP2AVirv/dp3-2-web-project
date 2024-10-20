@@ -5,7 +5,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to left, #dcdcdc 0%, #ffffff 50%, #dcdcdc 100%);
+    background-color: white;
     transition: background-color 0.3s;
 }
 /* Dark mode poga */
@@ -18,7 +18,7 @@ body {
 }
 
 .dark-mode {
-    background: linear-gradient(to left, #333 0%, #444 50%, #333 100%);
+    background-color: #333;
     color: white;
 }
 
@@ -42,8 +42,13 @@ body {
     color: #333;
 }
 
-body.dark-mode #dark-mode-btn:hover {
+body.dark-mode #dark-mode-btn {
     background-color: #444;
+    color: white
+}
+
+body.dark-mode #dark-mode-btn:hover {
+    background-color: #333;
     color: white;
 }
 
@@ -56,16 +61,17 @@ body.dark-mode img {
     filter: brightness(80%);
 }
 
-body.dark-mode .header {
+body.dark-mode .navbar {
     background-color: #444;
 }
 
 body.dark-mode .navbar a {
     color: white;
+    background-color: #444;
 }
 
 body.dark-mode .navbar a:hover {
-    background-color: #444;
+    background-color: #333;
     color: white;
 }
 
@@ -202,8 +208,13 @@ body.dark-mode .dropdown-content a:hover{
 .description {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
     margin-bottom: 20px;
+}
+
+.description h1 {
+    font-size: 45px;
 }
 
 .description h2 {
@@ -218,6 +229,15 @@ body.dark-mode .dropdown-content a:hover{
 
 .description div p {
     font-size: 20px;
+}
+
+.description img{
+    width: 100%;
+    max-width: 300px;
+}
+
+body.dark-mode .description img{
+    filter: brightness(130%)
 }
 
 /* Kartītes */
