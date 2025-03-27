@@ -4,44 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicīnas centrs</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="" crossorigin="anonymous"></script>
+    <link href="/assets/awesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/assets/awesome/css/brands.min.css" rel="stylesheet">
+    <link href="/assets/awesome/css/solid.css" rel="stylesheet"> 
 </head>
-<body>
+<header>  
     <div class="navbar">
         <div class="dark-mode-toggle">
             <button id="dark-mode-btn">Dark Mode</button>
         </div>
         <div class="menu">
-            <a href="#home">Sākums <i class="fas fa-home"></i></a>
-            <a href="#">Par mums <i class="fas fa-info-circle"></i></a>
+            <a href="#home"><i class="fa-solid fa-house"></i>Sākums </a>
+            <a href="#"><i class="fas fa-info-circle"></i>Par mums </a>
             <div class="dropdown">
-                <a href="#">Izvēlne <i class="fas fa-caret-down"></i></a>
+                <a href="#"><i class="fas fa-caret-down"></i>Izvēlne </a>
                 <div class="dropdown-content">
                     <a href="#">Cenas</a>
                     <a href="#">Atsauksmes</a>
-                    <a href="#">Akcijas</a>
+                    <a href="#">Pakalpojumi</a>
                 </div>
             </div>
-            <a href="#">Kontakti <i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i>Kontakti </a>
         </div>
         <div class="hamburger" onclick="toggleMenu()">
             <i class="fas fa-bars"></i>
         </div>
     </div>
+</header>
+<body>
+    
 
     <div class="content">
         <div class="main-section">
             <div class="description">
-                <img src="masazasLogo.png" alt="Masāžas logo" />
+                <img src="/images/medicina.png" alt="Medicīnas centra logo" />
                 <h1>HEALTH AND CARE</h1>
                 <h2>Labākais medicīnas centrs Latvijā!</h2>
                 <p>Mēs piedāvājam profesionālus medicīnas pakalpojumus, lai uzlabotu jūsu labsajūtu un veselību.</p>
             </div>
             <div class="cards-container">
                 <div class="card">
-                    <img src="https://zn48.ru/upload/delight.webpconverter/upload/iblock/191/19165773cc9cd11e83498a5438ff3c04.png.webp?166330703521470" alt="Speciālists 1">
+                    <img src="/images/Spec1.png" alt="Speciālists 1">
                     <div class="card-content">
                         <h3>1. Speciālists</h3>
                         <p>Irina</p>
@@ -49,7 +54,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://i0.wp.com/urologyspecialistspc.com/wp-content/uploads/2020/08/Dr-Osula.jpg?fit=400%2C533&ssl=1" alt="Speciālists 2">
+                    <img src="/images/Spec2.png" alt="Speciālists 2">
                     <div class="card-content">
                         <h3>2. Speciālists</h3>
                         <p>Janka</p>
@@ -57,7 +62,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://hsvheartmds.com/wp-content/uploads/2017/01/dr_foster2.jpg" alt="Speciālists 3">
+                    <img src="/images/Spec3.jpg" alt="Speciālists 3">
                     <div class="card-content">
                         <h3>3. Speciālists</h3>
                         <p>Renča</p>
@@ -85,7 +90,9 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/scroll.js"></script>
+
 </body>
 </html>
 
