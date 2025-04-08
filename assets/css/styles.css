@@ -1,4 +1,3 @@
-/* Pamatstili */
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -6,16 +5,41 @@ body {
     display: flex;
     flex-direction: column;
     background-color: white;
-    transition: background-color 0.3s;
+    transition: background-color 0.0s;
 }
-/* Dark mode poga */
+
+header {
+    box-shadow:0px 3px 19px -11px rgba(0,0,0,0.75);
+    position: relative;
+    z-index: 1000;
+}
+
 .dark-mode-toggle {
     position: absolute;
-    right: 20px;
-    top: 7px;
-    display: flex;
-    align-items: center;
+    right: 0px;
+    font-size: 18px;
 }
+
+.navbar .menu i.fa-house { 
+    color: #58FFFF; 
+}
+
+.navbar .menu i.fa-info-circle{
+    color: #58FFFF;
+}
+
+.navbar .menu i.fa-caret-down{
+    color: #58FFFF;
+}
+
+.navbar .menu i.fa-envelope{
+    color: #58FFFF;
+}
+
+.logo-link {
+    cursor: pointer;
+}
+
 
 .dark-mode {
     background-color: #333;
@@ -23,15 +47,12 @@ body {
 }
 
 #dark-mode-btn {
-    font-size: 15px;
-    position: relative;
-    display: flex;
-    align-items: center;
+    font-size: 18x;
     transition: all 30ms;
     transition-duration: 300ms;
     padding: 8px 12px;
     border-radius: 10px;
-    background-color: #333;
+    background-color: #194E60;
     color: white;
     border: none;
     cursor: pointer;
@@ -58,11 +79,11 @@ body.dark-mode {
 }
 
 body.dark-mode img {
-    filter: brightness(80%);
+    filter: brightness(1);
 }
 
 body.dark-mode .navbar {
-    background-color: #444;
+    background-color: #333;
 }
 
 body.dark-mode .navbar a {
@@ -86,7 +107,7 @@ body.dark-mode .card-content button:hover{
 }
 
 body.dark-mode .modal-content {
-    background-color: #444;
+    background-color: #444 !important;
     color: white;
 }
 
@@ -115,6 +136,18 @@ body.dark-mode .dropdown-content a:hover{
     background-color: #333;
 }
 
+body.dark-mode #footerMenu button{
+    background-color: #444444;
+}
+
+body.dark-mode #rightFooterMenu button {
+    background-color: #444;
+}
+
+body.dark-mode .service-item {
+    background-color: #444444;
+}
+
 .sticky-active {
     text-align: center;
     color: white;
@@ -122,30 +155,35 @@ body.dark-mode .dropdown-content a:hover{
     top: 0; 
     z-index: 1000; 
     transition: box-shadow 0.8s ease-in-out;
-    box-shadow: 0px 5px 33px -8px rgba(0,0,0,0.75);
+    box-shadow:0px 3px 19px -11px rgba(0,0,0,0.75);
 }
 
-/* Navigācijas stili */
 .navbar {
     padding: 6px 20px;
-    background-color: #333;
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-   
 }
 
+.navbar img {
+    filter: brightness(1.5);
+    height: 100px;
+    width: auto;
+}
+
+
 .navbar div.menu {
-    position: relative; 
+    position: absolute; 
     left: 50%; 
     transform: translateX(-50%); 
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 35px;
 }
 
 .navbar a {
-    color: white;
+    color: #174D5D;
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 10px;
@@ -153,6 +191,7 @@ body.dark-mode .dropdown-content a:hover{
     display: flex; 
     align-items: center; 
     gap: 8px; 
+    font-size: 20px;
 }
 
 .navbar a:hover {
@@ -160,16 +199,11 @@ body.dark-mode .dropdown-content a:hover{
     color: #333;
 }
 
-.right {
-    margin-left: auto;
-}
-
 .hamburger {
     display: none;
     cursor: pointer;
 }
 
-/* Dropdown izvēlne */
 .dropdown {
     position: relative;
 }
@@ -201,11 +235,11 @@ body.dark-mode .dropdown-content a:hover{
 
 /* Galvenais saturs */
 .content {
-    padding: 20px 40px;
     flex: 1;
     display: flex;
     justify-content: space-between;
     align-items: start;
+    flex-direction: column;
 }
 
 .main-section {
@@ -214,13 +248,14 @@ body.dark-mode .dropdown-content a:hover{
     flex-direction: column;
 }
 
-/* Apraksts */
-.description {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+
+.cards-title {
     text-align: center;
-    margin-bottom: 20px;
+    border-bottom: 2px solid #000;
+    width: 200px;
+    margin: 40px auto 60px;
+    
 }
 
 .description h1 {
@@ -229,34 +264,74 @@ body.dark-mode .dropdown-content a:hover{
 
 .description h2 {
     font-size: 30px;
-    text-align: center;
 }
 
-
-.description div {
-    display: flex;
-}
-
-.description div p {
-    font-size: 20px;
-}
-
-.description img{
-    width: 100%;
-    max-width: 300px;
+.container {
+    margin: 50px 0px 20px;
 }
 
 body.dark-mode .description img{
-    filter: brightness(130%)
+    filter: brightness(100% )
 }
 
 /* Kartītes */
 .cards-container {
-    margin-top: 50px;
+    width: 100%;
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    
+}
+
+.row {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.carousel-indicators {
+    bottom: -50px !important;
+}
+
+.carousel-indicators button {
+    background-color: black !important; 
+    width: 12px !important;  
+    height: 12px !important;
+    border-radius: 50% !important; 
+
+}
+
+.carousel-indicators .active {
+    background-color: black !important; 
+    opacity: 1;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    filter: invert(100%); 
+}
+
+.c-item{
+    height: 300px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;  
+}
+
+.right {
+    justify-content: flex-end;
 }
 
 .card {
@@ -264,8 +339,9 @@ body.dark-mode .description img{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    width: 300px;
     overflow: hidden;
+    width: 100%;
+    max-width: 370px;
 }
 
 .card:hover {
@@ -275,8 +351,9 @@ body.dark-mode .description img{
 
 .card img {
     width: 100%;
-    height: 200px;
+    height: 320px;
     object-fit: cover;
+
 }
 
 .card-content {
@@ -285,72 +362,37 @@ body.dark-mode .description img{
 }
 
 .card-content button {
-    font-size: 15px;
-    background-color: #333;
+    font-size: 16px;
+    background-color: #194E60;
     border-radius: 10px;
-    border: none;
-    padding: 10px;
+    padding: 5px 30px 5px;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    font-weight: 600;
+    border: none;
+    height: 40px; 
+   
 }
 
 .card-content button:hover {
     background-color: white;
     color: #333;
     transform: scale(1.05);
+    border: 1px solid black;
 }
 
-/* Kājene */
 .footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
+    background-color: #194E60;
     color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 270px;
 }
 
-/* Modālais logs */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-
-
-
-/* Hamburger izvēlne - responsīvais dizains */
 @media (max-width: 768px) {
     .navbar div.menu {
         display: none;
@@ -384,12 +426,204 @@ body.dark-mode .description img{
     color: white;
     margin-left: 25px;
     margin-right: 25px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .social-icons a:hover i {
     transform: scale(1.2);
 }
 
-.footer p {
+
+.footer button {
+    background-color: #194E60;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+}
+
+.footer button:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s;
+}
+
+.left-column,
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-column {
+    align-items: flex-start;
+}
+
+.right-column {
+    align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Ja ekrāns ir mazs, kolonnas tiek sakārtotas vertikāli */
+        align-items: center;
+    }
+
+    .left-column,
+    .right-column {
+        align-items: center;
+    }
+}
+
+.text-center{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-row {
+    height: 200px;
+}
+
+.text-center p {
+    margin: 16px 0px;
+}
+
+.left-column p,
+.left-column h3 {
+    margin: 0px 0px 10px 0px;
+}
+
+#registracija {
+    font-size: 18x;
+    transition: all 30ms;
+    transition-duration: 300ms;
+    padding: 8px 12px;
+    border-radius: 10px;
+    background-color: white;
+    color: #194E60;;
+    border: none;
+    cursor: pointer;
+}
+
+#registracija:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+body.dark-mode #registracija {
+    background-color: #444;
+    color: white
+}
+
+body.dark-mode #registracija:hover {
+    background-color: #333;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+.parmumsTitle {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    width: 200px;
+    margin: 0px auto;
+}
+
+.with-dots li {
+    list-style-type: disc;
+    display: list-item;
+    padding-left: 0.5rem;
+}
+
+.parmumsContent {
+    border-radius: 10px;
+    box-shadow:0px 3px 19px -11px rgba(0,0,0,0.75);
+    padding: 20px;
+}
+
+.img-fluid {
+    border-radius: 10px;
+    height: 270px !important;
+    width: 600px;
+    object-fit: cover; /* nodrošina, ka attēls neaizpilda tikai platumu vai augstumu, bet saglabā proporcijas */
+    display: block; /* ļauj centrēt attēlu */
+    margin: 0 auto; /* centrē horizontāli */
+}
+
+.kontaktiTitle {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    width: 200px;
+    margin: 0px auto;  
+}
+
+.kontaktiContent h2 {
+    margin: 0px 0px 16px;
+}
+
+.kontaktiContent.mb-5 {
+    margin-bottom: 0px !important;
+}
+
+.kontaktiAdrese h2 {
+    margin: 0px 0px 16px;
+}
+
+.kontaktiMap h2 {
+    margin: 0px 0px 16px;
+}
+
+.kontaktiContainer {
+    border-radius: 10px;
+    box-shadow:0px 3px 19px -11px rgba(0,0,0,0.75);
+    padding: 20px;
+}
+
+.work-time-modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff !important;
+    padding: 20px;
+    margin: 15% auto;
+    border-radius: 10px;
+    width: 50% !important;
     text-align: center;
 }
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.privacy-title {
+    text-align: center;
+    border-bottom: 2px solid #000;
+    width: 300px;
+    margin: 40px auto 60px;
+}
+

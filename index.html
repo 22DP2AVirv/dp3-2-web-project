@@ -5,94 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicīnas centrs</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/awesome/css/fontawesome.min.css" rel="stylesheet">
     <link href="/assets/awesome/css/brands.min.css" rel="stylesheet">
     <link href="/assets/awesome/css/solid.css" rel="stylesheet"> 
 </head>
-<header>  
-    <div class="navbar">
-        <div class="dark-mode-toggle">
-            <button id="dark-mode-btn">Dark Mode</button>
-        </div>
-        <div class="menu">
-            <a href="#home"><i class="fa-solid fa-house"></i>Sākums </a>
-            <a href="#"><i class="fas fa-info-circle"></i>Par mums </a>
-            <div class="dropdown">
-                <a href="#"><i class="fas fa-caret-down"></i>Izvēlne </a>
-                <div class="dropdown-content">
-                    <a href="#">Cenas</a>
-                    <a href="#">Atsauksmes</a>
-                    <a href="#">Pakalpojumi</a>
-                </div>
+<header>
+    <div class="container-md">
+        <div class="navbar">
+            <span class="logo-link" onclick="window.location.href='index.html';">
+                <img src="/images/medicina.webp" alt="Medicīnas centra logo" class="logo">
+            </span>
+            <div class="dark-mode-toggle">
+                <button id="registracija" onclick="window.location.href='registracija.html'">Reģistrācija</button>
+                <button id="dark-mode-btn">Tumsas režīms</button>        
             </div>
-            <a href="#"><i class="fas fa-envelope"></i>Kontakti </a>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
+            <div class="menu">
+                <li class="nav-item">
+                    <a href="index.html"><i class="fa-solid fa-house"></i>Sākums </a>
+                </li>
+                <li>
+                    <a href="parmums.html"><i class="fas fa-info-circle"></i>Par mums </a>
+                </li>
+                    <div class="dropdown">
+                        <a href="#"><i class="fas fa-caret-down"></i>Izvēlne </a>
+                    <div class="dropdown-content">
+                        <li class="nav-item">
+                            <a class="nav-link" href="cenas.html">Cenas</a>
+                        </li>
+                        <a href="pakalpojumi.html">Pakalpojumi</a>
+                    </div>
+                </div>
+                <li>
+                    <a href="kontakti.html"><i class="fas fa-envelope"></i>Kontakti </a>
+                </li>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </div>
 </header>
 <body>
-    
+    <div class="container-md">
+        <div class="content">
+            <div class="container">
+                <div class="row description">
+                    <div class="col-md-6 text-content">
+                        <h1>HEALTH AND CARE</h1>
+                        <h2>Labākais medicīnas centrs Latvijā!</h2>
+                        <p>Piedāvājam profesionālus medicīnas pakalpojumus, lai uzlabotu jūsu labsajūtu un veselību. Mēs esam vadošais medicīnas centrs Latvijā, kas piedāvā profesionālus un pielāgotus pakalpojumus, lai uzlabotu jūsu veselību un dzīves kvalitāti. Mūsu komandā strādā pieredzējuši speciālisti, kas sniedz augstākās klases aprūpi dažādās jomās – no profilaktiskās ārstēšanas līdz speciālistu konsultācijām un terapijām. Ar modernām tehnoloģijām un individuālu pieeju mēs palīdzam katram pacientam atgūt un uzturēt veselību. Mūsu misija ir sniegt vislabāko medicīnisko atbalstu, kas veicina jūsu labsajūtu.</p>
+                    </div>
+                    <div class="col-md-6 slider">
+                        <div id="main-slider" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#main-slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#main-slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#main-slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active c-item">
+                                    <img src="images/slider1.webp" class="d-block w-100 c-img" alt="Slide 1">
+                                </div>
+                                <div class="carousel-item c-item">
+                                    <img src="images/slider2.webp" class="d-block w-100 c-img" alt="Slide 2">
+                                </div>
+                                <div class="carousel-item c-item">
+                                    <img src="images/slider3.webp" class="d-block w-100 c-img" alt="Slide 3">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#main-slider" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#main-slider" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>               
 
-    <div class="content">
-        <div class="main-section">
-            <div class="description">
-                <img src="/images/medicina.webp" width="500" height="300" alt="Medicīnas centra logo" />
-                <h1>HEALTH AND CARE</h1>
-                <h2>Labākais medicīnas centrs Latvijā!</h2>
-                <p>Mēs piedāvājam profesionālus medicīnas pakalpojumus, lai uzlabotu jūsu labsajūtu un veselību.</p>
-            </div>
-            <div class="cards-container">
-                <div class="card">
-                    <img src="/images/Spec1.webp" width="500" height="300" alt="Speciālists 1">
-                    <div class="card-content">
-                        <h3>1. Speciālists</h3>
-                        <p>Irina</p>
-                        <button onclick="openModal('Irina', 'Speciālists 1', 'Profesionāla masiere ar vairāk nekā 10 gadu pieredzi.')">Pasūtīt</button>
+            <div class="cards-container" id="pakalpojumi">
+                <div class="cards-title">
+                    <h2>Pakalpojumi</h2>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card">
+                            <img src="/images/datortomografija.webp" alt="Speciālists 1">
+                            <div class="card-content">
+                                <h3>Datortomogrāfija</h3>
+                                <p>Ātra un precīza diagnostika ar augstas izšķirtspējas attēliem. Palīdz noteikt dažādas saslimšanas un kontrolēt ārstēšanas gaitu.</p>
+                                <a href="pieteikties.html">
+                                    <button>Pieteikties</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card">
+                            <img src="/images/arsts.webp" alt="Speciālists 2">
+                            <div class="card-content">
+                                <h3>Ģimenes ārsti</h3>
+                                <p>Jūsu veselības ceļvedis - profilakse, diagnoze un ārstēšana vienuviet. Individuāla pieeja un rūpes par visu ģimeni.</p>
+                                <a href="pieteikties.html">
+                                    <button>Pieteikties</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-center">
+                        <div class="card">
+                            <img src="/images/vakcinacija.webp" alt="Speciālists 3">
+                            <div class="card-content">
+                                <h3>Vakcinācija</h3>
+                                <p>Drošība jums un jūsu tuviniekiem! Aizsardzība pret infekcijām ar pierādītu efektivitāti un minimālu diskomfortu.</p>
+                                <a href="pieteikties.html">
+                                    <button>Pieteikties</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <img src="/images/Spec2.webp" width="500" height="300" alt="Speciālists 2">
-                    <div class="card-content">
-                        <h3>2. Speciālists</h3>
-                        <p>Janka</p>
-                        <button onclick="openModal('Janka', 'Speciālists 2', 'Īpaša specializācija terapeitiskajā masāžā.')">Pasūtīt</button>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="/images/Spec3.webp" width="500" height="300" alt="Speciālists 3">
-                    <div class="card-content">
-                        <h3>3. Speciālists</h3>
-                        <p>Renča</p>
-                        <button onclick="openModal('Renča', 'Speciālists 3', 'Eksperts sporta un relaksācijas masāžās.')">Pasūtīt</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modal-title"></h2>
-            <p id="modal-description"></p>
+            </div>          
         </div>
     </div>
 
     <footer class="footer">
-        <p>&copy; 2024 Aleksis Virvinskis. Visas tiesības aizsargātas.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="container-md">
+            <div class="row footer-row">
+                <div class="col-md-4 left-column">
+                    <div>
+                        <h3>Health and Care</h3>
+                        <p>Kontakti: +371 22351340</p>
+                        <p>Adrese: Lidoņu iela 13, Rīga, LV-1055</p>
+                    </div>
+                </div>
+                <div id="footerMenu" class="col-md-4 text-center">
+                    <button class="work-time" onclick="showWorkTime()">Darba laiks</button>
+                    <a href="index.html">
+                        <button class="home">Sākums</button>
+                    </a>
+                    <a href="parmums.html">
+                        <button class="about">Par mums</button>
+                    </a>
+                    <a href="kontakti.html">
+                        <button class="contacts">Kontakti</button>
+                    </a>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <p>&copy; 2024 Aleksis Virvinskis. Visas tiesības aizsargātas.</p>
+                </div>
+                <div id="rightFooterMenu" class="col-md-4 right-column">
+                    <a href="pakalpojumi.html">
+                        <button class="pakalpojumi">Pakalpojumi</button>
+                    </a>
+                    <a href="cenas.html">
+                        <button class="price">Cenas</button>
+                    </a>
+                    <a href="privatuma-politika.html">
+                    <button class="privacy">Privātuma politika</button>
+                    </a>
+                    <a href="registracija.html">
+                        <button class="Logins">Log in / Sign up</button>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
+    <div id="workTimeModal" class="work-time-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeWorkTime()">&times;</span>
+            <h2>Darba laiks</h2>
+            <p>Pirmdiena - Piektdiena: 9:00 - 21:00</p>
+            <p>Sestdiena: 10:00 - 20:00</p>
+            <p>Svētdiena: Slēgts</p>
+        </div>
+    </div>
 
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/scroll.js"></script>
-
 </body>
 </html>
+
+
+
+
 
