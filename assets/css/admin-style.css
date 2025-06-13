@@ -1,0 +1,60 @@
+/* admin-style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+.sidebar {
+    background-color: #343a40;
+    padding: 20px;
+    color: white;
+    height: 100vh;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.sidebar .nav-item a {
+    color: #ddd;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar .nav-item a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.table th, .table td {
+    text-align: center;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Galvenais saturs */
+.col-md-9 {
+    padding: 20px;
+}
+
+/* Admin panelis stili */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+

@@ -122,41 +122,42 @@
     <div class="pieteikšanās-container">
         <button class="close-btn" onclick="window.location.href='index.html'">&times;</button>
         <h2>Pieteikšanās</h2>
-        <form>
-            <input type="text" class="form-control" placeholder="Vārds*" required oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
-            <input type="text" class="form-control" placeholder="Uzvārds*" required oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
-            <input type="tel" class="form-control" placeholder="Telefona numurs*" required pattern="^\+?[0-9\s\-]+$" oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
-            <input type="email" class="form-control" placeholder="E-pasts*" required oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
-            
-            <select class="form-control" id="procedura" required oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
+        <form id="appointmentForm">
+            <input type="text" class="form-control" id="name" placeholder="Vārds*" required>
+            <input type="text" class="form-control" id="surname" placeholder="Uzvārds*" required>
+            <input type="tel" class="form-control" id="phone" placeholder="Telefona numurs*" required pattern="^\+?[0-9\s\-]+$">
+            <input type="email" class="form-control" id="email" placeholder="E-pasts*" required>
+        
+            <select class="form-control" id="procedura" required>
                 <option value="" disabled selected>Izvēlieties Pakalpojumu*</option>
                 <option value="datortomografija">Datortomogrāfija</option>
                 <option value="gimenesArsts">Ģimenes ārsts</option>
                 <option value="vakcinacija">Vakcinācija</option>
             </select>
-
-            <!-- Vēlamais datums un laiks -->
+        
             <label for="velamaisDatums">Vēlamais datums</label>
             <input type="date" class="form-control" id="velamaisDatums" required>
+        
             <label for="velamaisLaiks">Vēlamais laiks</label>
             <input type="time" class="form-control" id="velamaisLaiks" required>
-
+        
             <div id="gimenesArstsOptions" style="display: none;">
-                <label for="kurNotiks">Kur notiks Jūsu procedūra?* </label>
-                <select class="form-control" id="kurNotiks" onchange="toggleFilialeAdrese()" oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
-                    <option value="" disabled selected>Izvēlieties opciju</option>
+                <label for="kurNotiks">Kur notiks Jūsu procedūra?*</label>
+                <select class="form-control" id="kurNotiks" onchange="toggleFilialeAdrese()" required>
+                    <option value="" disabled>Izvēlieties opciju</option>
                     <option value="majas">Mājās</option>
                     <option value="filiale">Filiālē</option>
                 </select>
                 
-                <div id="adreseInput" style="display: none;" oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
+        
+                <div id="adreseInput" style="display: none;">
                     <label for="adrese">Adrese*</label>
-                    <input type="text" class="form-control" id="adrese" placeholder="Ievadiet adresi" />
+                    <input type="text" class="form-control" id="adrese" placeholder="Ievadiet adresi">
                 </div>
-                
+        
                 <div id="filialeInput" style="display: none;">
                     <label for="filiale">Izvēlieties filiāli*</label>
-                    <select class="form-control" id="filiale" oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
+                    <select class="form-control" id="filiale" name="filiale">
                         <option value="" disabled selected>Izvēlieties filiāli*</option>
                         <option value="riga">Rīga, Brīvības iela</option>
                         <option value="jelgava">Jelgava, Zemgales prospekts</option>
@@ -164,24 +165,24 @@
                     </select>
                 </div>
             </div>
-
-            <!-- Filiāles izvēle, kas pazudīs, kad izvēlas "Ģimenes ārsts" -->
-            <select class="form-control" id="filialeSelect" required oninvalid="this.setCustomValidity('Lūdzu, aizpildiet šo lauku')" oninput="this.setCustomValidity('')">
+        
+            <select class="form-control" id="filialeSelect" name="filiale">
                 <option value="" disabled selected>Izvēlieties filiāli*</option>
                 <option value="riga">Rīga, Brīvības iela</option>
                 <option value="jelgava">Jelgava, Zemgales prospekts</option>
                 <option value="liepaja">Liepāja, Rožu iela</option>
             </select>
-
+        
             <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" id="privatumaPolitika" required oninvalid="this.setCustomValidity('Lūdzu, apstipriniet piekrišanu')" oninput="this.setCustomValidity('')">
+                <input class="form-check-input" type="checkbox" id="privatumaPolitika" required>
                 <label class="form-check-label" for="privatumaPolitika">
                     Piekrītu <a href="privatuma-politika.html" target="_blank">privātuma politikai</a>
                 </label>
             </div>
-
+        
             <button type="submit" class="btn btn-pieteikties">Pieteikties</button>
         </form>
+        
     </div>
 
     <script>
@@ -189,13 +190,15 @@
             var procedura = this.value;
             var gimenesArstsOptions = document.getElementById('gimenesArstsOptions');
             var filialeSelect = document.getElementById('filialeSelect');
-            
+
             if (procedura === 'gimenesArsts') {
                 gimenesArstsOptions.style.display = 'block';
-                filialeSelect.style.display = 'none';  // Paslēpjam filiāles izvēli
+                filialeSelect.style.display = 'none';
+                filialeSelect.required = false;
             } else {
                 gimenesArstsOptions.style.display = 'none';
-                filialeSelect.style.display = 'block';  // Parādām filiāles izvēli atkal
+                filialeSelect.style.display = 'block';
+                filialeSelect.required = true;
             }
         });
 
@@ -203,16 +206,25 @@
             var kurNotiks = document.getElementById('kurNotiks').value;
             var adreseInput = document.getElementById('adreseInput');
             var filialeInput = document.getElementById('filialeInput');
+            var adrese = document.getElementById('adrese');
+            var filiale = document.getElementById('filiale');
 
             if (kurNotiks === 'majas') {
                 adreseInput.style.display = 'block';
+                adrese.required = true;
+
                 filialeInput.style.display = 'none';
+                filiale.required = false;
             } else if (kurNotiks === 'filiale') {
                 adreseInput.style.display = 'none';
+                adrese.required = false;
+
                 filialeInput.style.display = 'block';
+                filiale.required = true;
             }
         }
     </script>
     <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/pieteikties.js"></script>
 </body>
 </html>
